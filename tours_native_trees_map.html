@@ -1257,6 +1257,9 @@
 			}
 			else {
 			 	dojo.addOnLoad(function() {
+					require(["esri/config"], function(esriConfig) {
+  esriConfig.defaults.io.corsEnabledServers.push("raw.githubusercontent.com");
+});
 					require([
 							"dojo/i18n!./resources/nls/template.js?v=" + version, 
 							"storymaps/ui/loadingIndicator/LoadingIndicator", 
